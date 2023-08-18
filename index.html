@@ -46,7 +46,7 @@
       </div>
     </header>
     <main class="w-[95%] mx-auto">
-      <section class="flex flex-col lg:flex-row">
+      <section class="flex flex-col lg:flex-row mb-8">
         <!-- Shape Container -->
         <div
           class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -113,7 +113,7 @@
               </p>
               <p class="text-[#414141] text-lg">Area: <span id="area-rectangle">0</span>cm<sup>2</sup></p>
               <div class="card-actions">
-                <button class="bg-[#1090D8] text-white px-12 py-4 rounded-lg" onclick="rectangleArea()">
+                <button class="bg-[#1090D8] text-white px-12 py-4 rounded-lg hover:bg-purple-600" onclick="rectangleArea()">
                   Calculate
                 </button>
               </div>
@@ -134,18 +134,20 @@
                   type="text"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="base"
+                  id="parallelogram-base"
                 />
                 <span>cm</span>
                 <input
                   type="text"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="height"
+                  id="parallelogram-height"
                 />
                 <span class="ml-1">cm</span>
               </p>
-               <p class="text-[#414141] text-lg">Area: <span></span></p>
+               <p class="text-[#414141] text-lg">Area: <span id="area-parallelogram">0</span>cm<sup>2</sup></p>
               <div class="card-actions">
-                <button class="bg-[#1090D8] text-white px-12 py-4 rounded-lg">
+                <button class="bg-[#1090D8] text-white px-12 py-4 rounded-lg hover:bg-purple-600" onclick="parallelogramArea()">
                   Calculate
                 </button>
               </div>
@@ -168,18 +170,20 @@
                   type="text"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="d1"
+                  id="first-diagonal"
                 />
                 <span>cm</span>
                 <input
                   type="text"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="d2"
+                   id="second-diagonal"
                 />
                 <span class="ml-1">cm</span>
               </p>
-               <p class="text-[#414141] text-lg">Area: <span></span></p>
+              <p class="text-[#414141] text-lg">Area: <span id="area-rhombus">0</span>cm<sup>2</sup></p>
               <div class="card-actions">
-                <button class="bg-[#1090D8] text-white px-12 py-4 rounded-lg">
+                <button class="bg-[#1090D8] text-white px-12 py-4 rounded-lg hover:bg-purple-600" onclick="rhombusArea()">
                   Calculate
                 </button>
               </div>
@@ -202,18 +206,20 @@
                   type="text"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="Perimeter"
+                  id="perimeter-value"
                 />
                 <span>cm</span>
                 <input
                   type="text"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="Apothem"
+                  id="apothem-value"
                 />
                 <span class="ml-1">cm</span>
               </p>
-               <p class="text-[#414141] text-lg">Area: <span></span></p>
+              <p class="text-[#414141] text-lg">Area: <span id="area-pentagon">0</span>cm<sup>2</sup></p>
               <div class="card-actions">
-                <button class="bg-[#1090D8] text-white px-12 py-4 rounded-lg">
+                <button class="bg-[#1090D8] text-white px-12 py-4 rounded-lg hover:bg-purple-600" onclick="pentagonArea()">
                   Calculate
                 </button>
               </div>
@@ -232,18 +238,20 @@
                   type="text"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="a"
+                  id="major-radius"
                 />
                 <span>cm</span>
                 <input
                   type="text"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="b"
+                  id="minor-radius"
                 />
                 <span class="ml-1">cm</span>
-                 <p class="text-[#414141] text-lg">Area: <span></span></p>
+                <p class="text-[#414141] text-lg">Area: <span id="area-ellipse">0</span>cm<sup>2</sup></p>
               </p>
               <div class="card-actions">
-                <button class="bg-[#1090D8] text-white px-12 py-4 rounded-lg">
+                <button class="bg-[#1090D8] text-white px-12 py-4 rounded-lg hover:bg-purple-600" onclick="ellipseArea()">
                   Calculate
                 </button>
               </div>
