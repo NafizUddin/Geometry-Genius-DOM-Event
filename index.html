@@ -21,6 +21,11 @@
       body {
         font-family: "Inter", sans-serif;
       }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+       -webkit-appearance: none;
+      margin: 0;
+}
     </style>
   </head>
   <body>
@@ -63,14 +68,14 @@
               <p class="text-[#414141]">Area (A) = 0.5 X b X h</p>
               <p class="mb-3">
                 <input
-                  type="text"
+                  type="number"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="base"
                   id="triangle-base"
                 />
                 <span>cm</span>
                 <input
-                  type="text"
+                  type="number"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="height"
                   id="triangle-height"
@@ -97,14 +102,14 @@
               <p class="text-[#414141]">Area (A) = w X l</p>
               <p class="mb-3">
                 <input
-                  type="text"
+                  type="number"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="width"
                   id="rectangle-width"
                 />
                 <span>cm</span>
                 <input
-                  type="text"
+                  type="number"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="height"
                   id="rectangle-height"
@@ -131,14 +136,14 @@
               <p class="text-[#414141]">Area (A) = b X h</p>
               <p class="mb-3">
                 <input
-                  type="text"
+                  type="number"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="base"
                   id="parallelogram-base"
                 />
                 <span>cm</span>
                 <input
-                  type="text"
+                  type="number"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="height"
                   id="parallelogram-height"
@@ -167,14 +172,14 @@
               </p>
               <p class="mb-3">
                 <input
-                  type="text"
+                  type="number"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="d1"
                   id="first-diagonal"
                 />
                 <span>cm</span>
                 <input
-                  type="text"
+                  type="number"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="d2"
                    id="second-diagonal"
@@ -203,14 +208,14 @@
               </p>
               <p class="mb-3">
                 <input
-                  type="text"
+                  type="number"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="Perimeter"
                   id="perimeter-value"
                 />
                 <span>cm</span>
                 <input
-                  type="text"
+                  type="number"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="Apothem"
                   id="apothem-value"
@@ -235,14 +240,14 @@
               <p>Area (A) = &pi; ab</p>
               <p class="mb-3">
                 <input
-                  type="text"
+                  type="number"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="a"
                   id="major-radius"
                 />
                 <span>cm</span>
                 <input
-                  type="text"
+                  type="number"
                   class="border border-black w-[70px] bg-[#F1F1F1] rounded px-2 py-1"
                   placeholder="b"
                   id="minor-radius"
@@ -259,9 +264,12 @@
           </div>
         </div>
 
-        <div class="w-[400px]">
+        <div class="w-[400px] border border-gray-950 ml-2">
           <div class="text-lg text-[#111111CC] font-bold text-center">
             <h1><u>Area Calculator</u></h1>
+            <div>
+              <ol id="calculation-entry" class="text-left px-4 mt-4"></ol>
+            </div>
           </div>
         </div>
       </section>
