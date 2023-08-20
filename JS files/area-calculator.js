@@ -10,26 +10,29 @@ function setAreaById(areaId, value) {
 }
 
 function addCalculationEntry(shapeType, areaValue) {
+
   const calculationList = document.getElementById("calculation-entry");
   const li = document.createElement("li");
   const count = calculationList.childElementCount;
   li.classList.add("my-3");
   li.innerHTML = `${
     count + 1
-  }. <span id="shape-name">${shapeType}</span> <span id="calculation-value" class="ml-2">${areaValue}</span> cm<sup>2</sup><button class="bg-[#1090D8] text-white ml-2 rounded-lg py-2 px-4 hover:bg-purple-600" id="convert-cm" onclick="convertToMeter()">Convert to m<sup>2</sup></button>`;
+  }. <span id="shape-name">${shapeType}</span> <span id="calculation-value" class="ml-2">${areaValue}</span> cm<sup>2</sup><button class="bg-[#1090D8] text-white ml-2 rounded-lg py-2 px-4 hover:bg-purple-600" id="convert-cm" onclick=convertToMeter("${areaValue}","${shapeType}")>Convert to m<sup>2</sup></button>`;
 
   calculationList.appendChild(li);
 }
 
-function convertToMeter() {
-  const calcValueInCmString =
-    document.getElementById("calculation-value").innerText;
-  const calcValueInCm = parseFloat(calcValueInCmString);
+function convertToMeter(value, shapeType) {
+
+  // const calcValueInCmString =
+  //   document.getElementById("calculation-value").innerText;
+  // console.log(calcValueInCmString);
+  const calcValueInCm = parseFloat(value);
   const calcValueInMeter = calcValueInCm / 10000;
-  console.log(calcValueInMeter);
-  const shapeName = document.getElementById("shape-name").innerText;
-  console.log(shapeName);
-  repeatCalculationEntry(shapeName, calcValueInMeter);
+  // console.log(calcValueInMeter);
+  // const shapeName = document.getElementById("shape-name").innerText;
+  // console.log(shapeName);
+  repeatCalculationEntry(shapeType, calcValueInMeter);
 }
 
 function repeatCalculationEntry(newShape, value) {
